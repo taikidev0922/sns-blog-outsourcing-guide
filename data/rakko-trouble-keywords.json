@@ -1,0 +1,1183 @@
+{
+  "generatedAt": "2026-05-04T00:03:28.546Z",
+  "selected": [
+    {
+      "label": "制作外注の相場を知りたい",
+      "keyword": "イラスト 依頼 相場",
+      "intent": "budget",
+      "href": "/?intent=budget#articles",
+      "searchVolume": 1300,
+      "metrics": {
+        "seoDifficulty": 35,
+        "searchVolume": 1300,
+        "cpc": 1.01,
+        "competition": 94,
+        "firstSeenRange": "over_1_year"
+      }
+    },
+    {
+      "label": "依頼文の書き方を知りたい",
+      "keyword": "依頼文 書き方",
+      "intent": "brief",
+      "href": "/?intent=brief#articles",
+      "searchVolume": 590,
+      "metrics": {
+        "seoDifficulty": 33,
+        "searchVolume": 590,
+        "cpc": 0.41,
+        "competition": 1,
+        "firstSeenRange": "over_1_year"
+      }
+    },
+    {
+      "label": "自作か外注か迷っている",
+      "keyword": "ロゴ 自作",
+      "intent": "selfmade-limit",
+      "href": "/?intent=selfmade-limit#articles",
+      "searchVolume": 210,
+      "metrics": {
+        "seoDifficulty": 47,
+        "searchVolume": 210,
+        "cpc": 1.31,
+        "competition": 88,
+        "firstSeenRange": "over_1_year"
+      }
+    },
+    {
+      "label": "ココナラ依頼で失敗したくない",
+      "keyword": "ココナラ 失敗",
+      "intent": "creator-selection",
+      "href": "/?intent=creator-selection#articles",
+      "searchVolume": 10,
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 10,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      }
+    }
+  ],
+  "ranked": [
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": 35,
+        "searchVolume": 1300,
+        "cpc": 1.01,
+        "competition": 94,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 1300
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": 33,
+        "searchVolume": 590,
+        "cpc": 0.41,
+        "competition": 1,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 590
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": 47,
+        "searchVolume": 210,
+        "cpc": 1.31,
+        "competition": 88,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 210
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場 個人",
+      "metrics": {
+        "seoDifficulty": 39,
+        "searchVolume": 210,
+        "cpc": 1.39,
+        "competition": 94,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 210
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 有償 依頼 相場",
+      "metrics": {
+        "seoDifficulty": 26,
+        "searchVolume": 210,
+        "cpc": 1.09,
+        "competition": 78,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 210
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ ライト 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 170,
+        "cpc": 0,
+        "competition": 44,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 170
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ ステッカー 自作 アプリ",
+      "metrics": {
+        "seoDifficulty": 55,
+        "searchVolume": 170,
+        "cpc": 0.71,
+        "competition": 57,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 170
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場 学生",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 140,
+        "cpc": 0.56,
+        "competition": 26,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 140
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画編集 外注 相場",
+      "metrics": {
+        "seoDifficulty": 30,
+        "searchVolume": 110,
+        "cpc": 3.38,
+        "competition": 97,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 110
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画 編集 外注 相場",
+      "metrics": {
+        "seoDifficulty": 30,
+        "searchVolume": 110,
+        "cpc": 3.38,
+        "competition": 97,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 110
+    },
+    {
+      "intent": "budget",
+      "seed": "ロゴ 依頼 相場",
+      "labelHint": "ロゴ依頼相場",
+      "keyword": "ロゴ 作成 依頼 相場",
+      "metrics": {
+        "seoDifficulty": 30,
+        "searchVolume": 110,
+        "cpc": 2.64,
+        "competition": 93,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 110
+    },
+    {
+      "intent": "budget",
+      "seed": "ロゴ 依頼 相場",
+      "labelHint": "ロゴ依頼相場",
+      "keyword": "ロゴ 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 90,
+        "cpc": 2.18,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 90
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ プレート 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 90,
+        "cpc": 0,
+        "competition": 24,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 90
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場 プロ",
+      "metrics": {
+        "seoDifficulty": 26,
+        "searchVolume": 90,
+        "cpc": 1.54,
+        "competition": 59,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 90
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "フラスタ イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 90,
+        "cpc": 1.3,
+        "competition": 19,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 90
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ ステッカー 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 1.07,
+        "competition": 94,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ヘルメット ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 1.3,
+        "competition": 96,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ 動画編集 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 0.58,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "ショート 動画 外注 相場",
+      "metrics": {
+        "seoDifficulty": 28,
+        "searchVolume": 70,
+        "cpc": 2.47,
+        "competition": 79,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ お ひねり 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ 動画 編集 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 0.58,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ プロジェクター 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 0,
+        "competition": 30,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "痛 車 イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 70,
+        "cpc": 0,
+        "competition": 4,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 70
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画 制作 外注 相場",
+      "metrics": {
+        "seoDifficulty": 29,
+        "searchVolume": 50,
+        "cpc": 7.59,
+        "competition": 13,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ 投影 ライト 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 50,
+        "cpc": 0,
+        "competition": 44,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ 著作権譲渡 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 50,
+        "cpc": 0,
+        "competition": 2,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場 アマチュア",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 50,
+        "cpc": 0,
+        "competition": 81,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "応援 広告 イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 50,
+        "cpc": 0,
+        "competition": 16,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 商用 利用 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 50,
+        "cpc": 1.3,
+        "competition": 87,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 50
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ 刺繍 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 0.6,
+        "competition": 31,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ シール 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 0.52,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ギター ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 0,
+        "competition": 2,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ ロゴ 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 40,
+        "cpc": 1.35,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "キャンプ ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 0,
+        "competition": 38,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ スキー コイル 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "漫画家 イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 40,
+        "cpc": 2.83,
+        "competition": 28,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ ホームページ 制作 相場",
+      "metrics": {
+        "seoDifficulty": 38,
+        "searchVolume": 40,
+        "cpc": 1.62,
+        "competition": 98,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 40
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ 相場",
+      "metrics": {
+        "seoDifficulty": 38,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 25,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画 外注 相場",
+      "metrics": {
+        "seoDifficulty": 43,
+        "searchVolume": 30,
+        "cpc": 2.22,
+        "competition": 81,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "営業 外注 相場",
+      "metrics": {
+        "seoDifficulty": 31,
+        "searchVolume": 30,
+        "cpc": 12.47,
+        "competition": 64,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "cad 外注 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 5.09,
+        "competition": 42,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ 自作 アプリ",
+      "metrics": {
+        "seoDifficulty": 79,
+        "searchVolume": 30,
+        "cpc": 0.77,
+        "competition": 49,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ マーク 自作",
+      "metrics": {
+        "seoDifficulty": 80,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 32,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "依頼文 書き方 個人",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "依頼文 書き方 学校",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "手紙 依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 1,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "実習 依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "エクセル 外注 相場",
+      "metrics": {
+        "seoDifficulty": 30,
+        "searchVolume": 30,
+        "cpc": 7.22,
+        "competition": 48,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ロゴ プリント 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 97,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "ロゴ 依頼 相場",
+      "labelHint": "ロゴ依頼相場",
+      "keyword": "ロゴ 制作 依頼 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 30,
+        "cpc": 3.77,
+        "competition": 80,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "t シャツ ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 1.04,
+        "competition": 48,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ イラスト 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 30,
+        "cpc": 0.73,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 料 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 1.24,
+        "competition": 27,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "youtube 外注 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 2.36,
+        "competition": 45,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "web サイト 外注 相場",
+      "metrics": {
+        "seoDifficulty": 47,
+        "searchVolume": 30,
+        "cpc": 4.39,
+        "competition": 97,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "ロゴ 依頼 相場",
+      "labelHint": "ロゴ依頼相場",
+      "keyword": "ロゴ デザイン 依頼 相場",
+      "metrics": {
+        "seoDifficulty": 46,
+        "searchVolume": 30,
+        "cpc": 3.12,
+        "competition": 94,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 依頼 相場 友達",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 33,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "海外 イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 1,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "イラスト 作成 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 1.78,
+        "competition": 96,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "mv イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 82,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "カーテシランプ ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 10,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "ギター ヘッド ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "excelマクロ 外注 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 4.57,
+        "competition": 52,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "ロゴ 依頼 相場",
+      "labelHint": "ロゴ依頼相場",
+      "keyword": "ロゴ 作成 依頼 個人 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 1.57,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "ゲーム イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 51,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "ボカロ イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 76,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "selfmade-limit",
+      "seed": "ロゴ 自作",
+      "labelHint": "ロゴ自作",
+      "keyword": "カーテシ ランプ ロゴ 自作",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 10,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "訪問看護指示書 依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "youtube 編集 外注 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 2.79,
+        "competition": 87,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "探偵ナイトスクープ 依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画編集 外注 相場 youtube",
+      "metrics": {
+        "seoDifficulty": 33,
+        "searchVolume": 30,
+        "cpc": 2.19,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "v チューバー イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 1.13,
+        "competition": 81,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "外注 相場",
+      "labelHint": "外注相場",
+      "keyword": "動画 編集 外注 相場 youtube",
+      "metrics": {
+        "seoDifficulty": 33,
+        "searchVolume": 30,
+        "cpc": 2.19,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "budget",
+      "seed": "イラスト 依頼 相場",
+      "labelHint": "イラスト依頼相場",
+      "keyword": "cd ジャケット イラスト 依頼 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 30,
+        "cpc": 0,
+        "competition": 53,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 30
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "依頼文 封筒 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 20,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ チラシ 相場",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 20,
+        "cpc": 0.41,
+        "competition": 100,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    },
+    {
+      "intent": "brief",
+      "seed": "依頼文 書き方",
+      "labelHint": "依頼文の書き方",
+      "keyword": "職場体験 依頼文 書き方",
+      "metrics": {
+        "seoDifficulty": null,
+        "searchVolume": 20,
+        "cpc": 0,
+        "competition": 0,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ デザイン 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 20,
+        "cpc": 0,
+        "competition": 51,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "ココナラ 商用利用 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 20,
+        "cpc": 0,
+        "competition": 96,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    },
+    {
+      "intent": "budget",
+      "seed": "ココナラ 相場",
+      "labelHint": "ココナラ相場",
+      "keyword": "動画編集 ココナラ 相場",
+      "metrics": {
+        "seoDifficulty": 34,
+        "searchVolume": 20,
+        "cpc": 0.94,
+        "competition": 96,
+        "firstSeenRange": "over_1_year"
+      },
+      "searchVolume": 20
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+.vercel
+.env*.local
+node_modules
+.next
+*.log
+*.pid
+.playwright-cli
+
+.vercel
+.env*.local

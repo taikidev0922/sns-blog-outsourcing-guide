@@ -1,0 +1,24 @@
+{
+  "name": "sns-blog-outsourcing-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "vercel deploy --prod",
+    "inventory:collect": "node scripts/collect-coconala-service-candidates.mjs",
+    "inventory:a8-links": "node scripts/a8-generate-coconala-product-links.mjs"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "^148.0.0",
+    "@supabase/supabase-js": "^2.105.1",
+    "@vercel/blob": "^2.0.0",
+    "next": "^16.1.6",
+    "pg": "^8.20.0",
+    "playwright": "^1.59.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
