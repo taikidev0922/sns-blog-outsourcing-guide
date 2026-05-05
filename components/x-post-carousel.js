@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function XPostCarousel({ embeds = [] }) {
   const [index, setIndex] = useState(0);
-  if (!embeds.length) return null;
+  const frameRef = useRef(null);
 
   const current = embeds[index];
   const canMove = embeds.length > 1;
@@ -13,10 +13,34 @@ export function XPostCarousel({ embeds = [] }) {
     setIndex((value) => (value + step + embeds.length) % embeds.length);
   }
 
+  useEffect(() => {
+    let timer;
+    let attempts = 0;
+
+    function loadXWidget() {
+      if (!frameRef.current) return;
+      if (window.twttr?.widgets?.load) {
+        window.twttr.widgets.load(frameRef.current);
+        return;
+      }
+
+      attempts += 1;
+      if (attempts < 25) {
+        timer = window.setTimeout(loadXWidget, 100);
+      }
+    }
+
+    timer = window.setTimeout(loadXWidget, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [index]);
+
+  if (!embeds.length) return null;
+
   return (
     <div className="x-carousel" aria-label="X投稿カルーセル">
-      <div className="x-carousel-frame">
-        <XPostCard embed={current} />
+      <div className="x-carousel-frame" ref={frameRef}>
+        <XPostCard embed={current} key={current?.id || current?.url || index} />
       </div>
 
       {canMove ? (
