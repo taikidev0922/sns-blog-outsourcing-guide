@@ -2,6 +2,7 @@ import fs from "fs/promises";
 
 import { del, list, put } from "@vercel/blob";
 import { getSupabaseAdmin, getSupabaseProjectKey } from "../lib/supabase-admin.js";
+import { writeArticles } from "../lib/articles-store.js";
 
 await loadEnvFile(".env.local");
 
@@ -24,12 +25,7 @@ async function resetArticlesBlob() {
     return;
   }
 
-  await put("cms/articles.json", "[]\n", {
-    access: "public",
-    addRandomSuffix: false,
-    allowOverwrite: true,
-    contentType: "application/json; charset=utf-8",
-  });
+  await writeArticles([]);
   report.blob.articles = "cleared";
 }
 
