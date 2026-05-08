@@ -10,7 +10,7 @@ import { fetchOfficialProductContext } from "../../../../lib/official-sources";
 import { attachGeneratedAffiliateLinks, markServicesUsedForArticle, selectServicesForArticle } from "../../../../lib/service-inventory";
 import { fetchRelatedXPosts } from "../../../../lib/x-posts";
 
-export const maxDuration = 180;
+export const maxDuration = 300;
 
 export async function GET(request) {
   return publishDummyArticle(request);
@@ -45,79 +45,127 @@ async function publishDummyArticle(request) {
       });
     }
 
-    const keywordCandidate = await selectKeywordForArticle(existingArticles);
-    const selectedServices = await selectServicesForArticle(keywordCandidate, existingArticles);
-    const comparisonItems = await attachGeneratedAffiliateLinks(selectedServices);
-    const affiliateLinkStatus = buildAffiliateLinkStatus(comparisonItems);
-    const officialContext = await fetchOfficialProductContext(keywordCandidate);
-    const xPostContext = await fetchRelatedXPosts(keywordCandidate, pipeline);
-    const baseArticle = buildDummyArticle(existingArticles, keywordCandidate, officialContext, comparisonItems);
-    const generatedContent = await generateArticleWithClaude(keywordCandidate, existingArticles, officialContext, comparisonItems);
-    let article = applyGeneratedArticleContent({
-      ...baseArticle,
-      xPosts: xPostContext.posts || [],
-      xPostSearchStatus: xPostContext.status,
-      xPostConsumedReads: xPostContext.consumedReads || 0,
-    }, generatedContent);
-    const generatedImage = await generateImageWithOpenAI(article);
-    const qualityScore = article.quality?.score || 0;
-    const minimumQualityScore = Number(process.env.MIN_ARTICLE_QUALITY_SCORE || 70);
+    const maxAttempts = Math.max(1, Number(process.env.CRON_GENERATION_ATTEMPTS || 3));
+    const attemptedArticles = [...existingArticles];
+    const failures = [];
 
-    if (pipeline.mode === "production" && qualityScore < minimumQualityScore) {
-      return NextResponse.json({
-        ok: false,
-        skipped: true,
-        reason: "article-quality-too-low",
-        qualityScore,
-        minimumQualityScore,
-        qualityChecks: article.quality?.checks || [],
-      }, { status: 422 });
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      const result = await generateAndPublishArticle({
+        pipeline,
+        existingArticles: attemptedArticles,
+        attempt,
+        maxAttempts,
+      });
+
+      if (result.ok) {
+        return NextResponse.json(result.response);
+      }
+
+      failures.push(result.failure);
+      if (result.keywordCandidate?.keyword) {
+        attemptedArticles.unshift({
+          keyword: result.keywordCandidate.keyword,
+          product: result.keywordCandidate.product,
+          publishedAt: new Date().toISOString(),
+        });
+      }
     }
 
-    if (generatedImage?.imageUrl) {
-      article = {
-        ...article,
-        imageUrl: generatedImage.imageUrl,
-        imageSource: generatedImage.source,
-        imageModel: generatedImage.model,
-      };
-    }
-
-    const readiness = validateProductionArticleReadiness({
-      pipeline,
-      comparisonItems,
-      xPostContext,
-      generatedContent,
-      generatedImage,
-    });
-
-    if (!readiness.ok) {
-      return NextResponse.json({
-        ok: false,
-        skipped: true,
-        reason: "article-readiness-check-failed",
-        checks: readiness.checks,
-        keyword: keywordCandidate.keyword,
-        affiliateLinkStatus,
-        articleSource: generatedContent?.source || "fallback",
-        imageSource: generatedImage?.source || "fallback",
-        xPostSearchStatus: xPostContext.status,
-        xPostCount: xPostContext.posts?.length || 0,
-      }, { status: 422 });
-    }
-
-    const result = await appendArticle(article);
-    await markKeywordUsedForArticle(keywordCandidate, article);
-    await markServicesUsedForArticle(comparisonItems, article);
-
-    revalidatePath("/");
-    revalidatePath(`/articles/${article.slug}`);
-
+    console.warn("Cron article generation failed after retries", JSON.stringify({ failures }));
     return NextResponse.json({
+      ok: false,
+      skipped: true,
+      reason: "article-generation-retries-exhausted",
+      attempts: failures.length,
+      failures,
+    }, { status: 422 });
+  } catch (error) {
+    const status = error.code === "STORAGE_NOT_CONFIGURED" ? 503 : 500;
+    return NextResponse.json({ ok: false, error: error.message }, { status });
+  }
+}
+
+async function generateAndPublishArticle({ pipeline, existingArticles, attempt, maxAttempts }) {
+  const keywordCandidate = await selectKeywordForArticle(existingArticles);
+  const selectedServices = await selectServicesForArticle(keywordCandidate, existingArticles);
+  const comparisonItems = await attachGeneratedAffiliateLinks(selectedServices);
+  const affiliateLinkStatus = buildAffiliateLinkStatus(comparisonItems);
+  const officialContext = await fetchOfficialProductContext(keywordCandidate);
+  const xPostContext = await fetchRelatedXPosts(keywordCandidate, pipeline);
+  const baseArticle = buildDummyArticle(existingArticles, keywordCandidate, officialContext, comparisonItems);
+  const generatedContent = await generateArticleWithClaude(keywordCandidate, existingArticles, officialContext, comparisonItems);
+  let article = applyGeneratedArticleContent({
+    ...baseArticle,
+    xPosts: xPostContext.posts || [],
+    xPostSearchStatus: xPostContext.status,
+    xPostConsumedReads: xPostContext.consumedReads || 0,
+  }, generatedContent);
+  const generatedImage = await generateImageWithOpenAI(article);
+  const qualityScore = article.quality?.score || 0;
+  const minimumQualityScore = Number(process.env.MIN_ARTICLE_QUALITY_SCORE || 70);
+
+  if (pipeline.mode === "production" && qualityScore < minimumQualityScore) {
+    const failure = {
+      reason: "article-quality-too-low",
+      attempt,
+      keyword: keywordCandidate.keyword,
+      qualityScore,
+      minimumQualityScore,
+      qualityChecks: article.quality?.checks || [],
+    };
+    console.warn("Cron article generation attempt failed", JSON.stringify(failure));
+    return { ok: false, keywordCandidate, failure };
+  }
+
+  if (generatedImage?.imageUrl) {
+    article = {
+      ...article,
+      imageUrl: generatedImage.imageUrl,
+      imageSource: generatedImage.source,
+      imageModel: generatedImage.model,
+    };
+  }
+
+  const readiness = validateProductionArticleReadiness({
+    pipeline,
+    comparisonItems,
+    xPostContext,
+    generatedContent,
+    generatedImage,
+  });
+
+  if (!readiness.ok) {
+    const failure = {
+      reason: "article-readiness-check-failed",
+      attempt,
+      keyword: keywordCandidate.keyword,
+      checks: readiness.checks,
+      affiliateLinkStatus,
+      articleSource: generatedContent?.source || "fallback",
+      imageSource: generatedImage?.source || "fallback",
+      xPostSearchStatus: xPostContext.status,
+      xPostCount: xPostContext.posts?.length || 0,
+    };
+    console.warn("Cron article generation attempt failed", JSON.stringify(failure));
+    return { ok: false, keywordCandidate, failure };
+  }
+
+  const result = await appendArticle(article);
+  await markKeywordUsedForArticle(keywordCandidate, article);
+  await markServicesUsedForArticle(comparisonItems, article);
+
+  revalidatePath("/");
+  revalidatePath(`/articles/${article.slug}`);
+
+  return {
+    ok: true,
+    response: {
       ok: true,
       mode: pipeline.mode,
       created: article,
       totalArticles: result.articles.length,
+      attempt,
+      maxAttempts,
       keywordSource: keywordCandidate?.source || "fallback",
       consumedCredit: keywordCandidate?.consumedCredit || 0,
       keywordRefreshStatus: keywordCandidate?.refreshStatus || null,
@@ -142,11 +190,8 @@ async function publishDummyArticle(request) {
         openaiImageModel: pipeline.openaiImageLive ? pipeline.openaiImageModel : null,
       },
       nextStep: "Switch ARTICLE_PIPELINE_MODE from test to production when ready for full production behavior.",
-    });
-  } catch (error) {
-    const status = error.code === "STORAGE_NOT_CONFIGURED" ? 503 : 500;
-    return NextResponse.json({ ok: false, error: error.message }, { status });
-  }
+    },
+  };
 }
 
 function validateProductionArticleReadiness({ pipeline, comparisonItems, xPostContext, generatedContent, generatedImage }) {
