@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { siteConfig } from "../lib/site-config";
 import { nicheConfig } from "../lib/niche-config";
 
@@ -40,11 +41,24 @@ export const metadata = {
 };
 
 const navItems = nicheConfig.navItems;
+const googleAnalyticsId = "G-N9Z4NPPNS3";
 
 export default function RootLayout({ children }) {
   return (
     <html lang={siteConfig.language || "ja"}>
       <body>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
         <header className="site-header">
           <a className="site-logo" href="/" aria-label={`${siteConfig.name} トップへ`}>
             <span>{siteConfig.name}</span>
